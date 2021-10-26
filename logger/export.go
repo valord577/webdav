@@ -24,7 +24,7 @@ func InitConsole(tmfmt string, highlight bool, level string) {
 		suagr := log.Sugar()
 
 		l = &logger{
-			log: log,
+			log:   log,
 			suagr: suagr,
 		}
 	})
@@ -42,7 +42,7 @@ func InitLogfile(tmfmt string, logfile string, maxLineNum int, level string) {
 		suagr := log.Sugar()
 
 		l = &logger{
-			log: log,
+			log:   log,
 			suagr: suagr,
 		}
 	})
