@@ -1,0 +1,76 @@
+//
+// The real data definition specification is JSON, not JSON5.
+// So it means trailing commas are not allowed.
+//
+// But you can use comments to improve readability.
+// Valid comments must begin with "//".
+//
+{
+  "server": {
+    "address": ":60080",
+
+    // Whether to use encrypted HTTP communication.
+    "useTLS": false,
+    // The files must contain PEM encoded data.
+    "cerFile": "",
+    "keyFile": "",
+    // The following values can be used:
+    //  -> v1.0 | v1.1 | v1.2 (default) | v1.3
+    // Due to security issues, 'v1.2' is recommended.
+    "minTLS": "v1.2"
+  },
+
+  "logger": {
+    // The following output can be used:
+    //  -> console (default) | logfile
+    "output": "logfile",
+    // A Level is a logging priority.
+    // If the given value is not used,
+    // the default behavior will be used.
+    //
+    // Default:
+    //   output == "console" -> debug
+    //   output == "logfile" -> info
+    //
+    // The following level can be used:
+    //  -> debug | info | warn | error | panic | fatal
+    //
+    "level": "",
+    // Go style time format template string.
+    // Default: "02-Jan-2006 15:04:05 MST[-07:00]"
+    "tmfmt": "02-Jan-2006 15:04:05 MST[-07:00]",
+    // Print WebDAV server http request messages.
+    "verbose": false,
+
+    // --------
+    // The following parameters are valid
+    // when the logs are output to the `console`.
+    // --------
+    // If true, highlight the output log.
+    // Default: false
+    "highlight": true,
+
+    // --------
+    // The following parameters are valid
+    // when the logs are output to the `logfile`.
+    // --------
+    // Maximum number of lines per log file.
+    // Default: the minimum value is 2048
+    "maxLineNum": 2048,
+    // The log file of the server.
+    // It is recommended to use an absolute path in a production environment.
+    // Default: "os.TempDir() + /webdav/webdav.log"
+    "logfile": "log/webdav.log"
+  },
+
+  // Do not provide guest mode directly.
+  // Try to use a shared account instead of guest mode.
+  "accounts": [
+    {
+      "username": "guest",
+      "passcode": "",
+      // The user has all permissions for the directory.
+      "scope": "."
+    }
+  ]
+}

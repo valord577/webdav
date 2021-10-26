@@ -1,0 +1,13 @@
+# darwin files
+.DS_Store
+
+# intelliJ files
+.idea
+
+# vscode files
+.vscode
+
+# project files
+log
+out
+systemd
