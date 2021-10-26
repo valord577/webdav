@@ -9,6 +9,7 @@ import (
 
 // @author valor.
 
+// WebDAVServ returns HTTP server for webdav.
 func WebDAVServ() *http.Server {
 	// Use net/http DefaultServeMux
 	http.HandleFunc("/", globalHandler)
