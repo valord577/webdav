@@ -27,7 +27,7 @@ func CerFilepath() string {
 	return c.server.cerFile
 }
 
-// CerFilepath returns the path of key file.
+// KeyFilepath returns the path of key file.
 func KeyFilepath() string {
 	return c.server.keyFile
 }
