@@ -48,7 +48,7 @@ func runServ(_ *clix.Command, _ []string) error {
 	serv := serve.WebDAVServ()
 
 	go func() {
-		var err error = nil
+		var err error
 
 		if rt.UseTLS() {
 			serv.TLSConfig = &tls.Config{
