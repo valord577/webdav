@@ -11,14 +11,14 @@ import (
 
 var infoCmd = &clix.Command{
 	Name:    "info",
-	Summary: "Print information about this application.",
+	Summary: "Print information.",
 
 	Run: printInfo,
 }
 
 var (
 	version  = "v1.0"
-	datetime = "2021-02-13"
+	datetime = "2021-10-27"
 )
 
 func printInfo(_ *clix.Command, _ []string) error {

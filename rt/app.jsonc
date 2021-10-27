@@ -23,7 +23,7 @@
   "logger": {
     // The following output can be used:
     //  -> console (default) | logfile
-    "output": "logfile",
+    "output": "console",
     // A Level is a logging priority.
     // If the given value is not used,
     // the default behavior will be used.
