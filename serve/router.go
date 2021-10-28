@@ -27,7 +27,7 @@ func globalHandler(w http.ResponseWriter, r *http.Request) {
 	user, pass, ok := r.BasicAuth()
 	if !ok {
 		basicAuthRequired(w)
-		log.Warnf("basic auth required from [%s]", user, pass, r.RemoteAddr)
+		log.Warnf("basic auth required from [%s]", r.RemoteAddr)
 		return
 	}
 
