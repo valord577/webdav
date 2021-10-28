@@ -80,6 +80,16 @@ Development
 
 <details>
 <summary>
+- Download modules.
+</summary>
+
+```text
+go mod download
+```
+</details>
+
+<details>
+<summary>
 - Build project.
 </summary>
 

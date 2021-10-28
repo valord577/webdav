@@ -17,8 +17,8 @@ var infoCmd = &clix.Command{
 }
 
 var (
-	version  = "v1.0"
-	datetime = "2021-10-27"
+	version  = "dev"
+	datetime = "-"
 )
 
 func printInfo(_ *clix.Command, _ []string) error {
