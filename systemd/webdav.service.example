@@ -4,7 +4,7 @@ After=network.target
 #RequiresMountsFor=${NFS_PATH}
 
 [Service]
-ExecStart=/opt/webdav/webdav serv -c /opt/webdav/app.json
+ExecStart=/opt/webdav/webdav serv -c /opt/webdav/app.jsonc
 ExecStop=/bin/kill -s QUIT ${MAINPID}
 Restart=on-failure
 TimeoutStartSec=10
