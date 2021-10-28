@@ -80,21 +80,17 @@ Development
 
 <details>
 <summary>
-- Download modules.
-</summary>
-
-```text
-go mod download
-```
-</details>
-
-<details>
-<summary>
 - Build project.
 </summary>
 
 ```text
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o out/bin/webdav github.com/valord577/webdav
+[user@host webdav]% bash webdav.sh -t "linux/amd64,linux/arm64"
+target: linux/amd64,linux/arm64
+output: /root/Projects/webdav/out
+build -> os: linux | arch: amd64
+      >> took 1.526s | sha256sum: 2eb1bb883a5e63431bf42abf03d2c6a51a746f30d4268863b2919009aec5ccee
+build -> os: linux | arch: arm64
+      >> took 1.666s | sha256sum: c5228a9b8a8c50128c1f465d01688a9be65d7d4b0e42f856d653b512c5a67cdc
 ```
 </details>
 
