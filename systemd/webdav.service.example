@@ -5,7 +5,7 @@ After=network.target
 
 [Service]
 ExecStart=/opt/webdav/webdav serv -c /opt/webdav/app.json
-ExecStop=/bin/kill -s QUIT \${MAINPID}
+ExecStop=/bin/kill -s QUIT ${MAINPID}
 Restart=on-failure
 TimeoutStartSec=10
 TimeoutStopSec=10
