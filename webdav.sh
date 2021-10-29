@@ -26,7 +26,6 @@ netbsd/arm64
 openbsd/amd64
 openbsd/arm
 openbsd/arm64
-openbsd/mips64
 windows/amd64
 windows/arm
 EOF
