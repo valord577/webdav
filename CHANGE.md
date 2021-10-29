@@ -11,6 +11,7 @@ All notable changes to **WebDAV** are documented in this file.
 #### Changed
 
 - Log format.
+- Reduce the targets of build.
 
 ## v1.0
 
