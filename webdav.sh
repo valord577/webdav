@@ -4,7 +4,7 @@
 # ------
 BASE_DIR=$(cd "$(dirname ${BASH_SOURCE[0]})" && pwd)
 
-BUILD_VERSION="v1.0"
+BUILD_VERSION="v1.1"
 BUILD_DATE=$(date '+%Y-%m-%dT%H:%M:%SZ%:z' -u)
 
 GO_LDFLAGS_VERSION="'github.com/valord577/webdav/cmd.version=${BUILD_VERSION}'"
@@ -17,7 +17,6 @@ freebsd/386
 freebsd/amd64
 freebsd/arm
 freebsd/arm64
-linux/386
 linux/amd64
 linux/arm
 linux/arm64
@@ -28,17 +27,13 @@ linux/mipsle
 linux/ppc64
 linux/ppc64le
 linux/riscv64
-linux/s390x
-netbsd/386
 netbsd/amd64
 netbsd/arm
 netbsd/arm64
-openbsd/386
 openbsd/amd64
 openbsd/arm
 openbsd/arm64
 openbsd/mips64
-windows/386
 windows/amd64
 windows/arm
 EOF
