@@ -13,7 +13,6 @@ GO_LDFLAGS_DATE="'github.com/valord577/webdav/cmd.datetime=${BUILD_DATE}'"
 PRESET_TARGETS=$(cat <<- 'EOF'
 darwin/amd64
 darwin/arm64
-freebsd/386
 freebsd/amd64
 freebsd/arm
 freebsd/arm64
