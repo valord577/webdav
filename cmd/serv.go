@@ -54,7 +54,8 @@ func runServ(_ *clix.Command, _ []string) error {
 			serv.TLSConfig = &tls.Config{
 				MinVersion: rt.MinVersionTLS(),
 			}
-			err = serv.ListenAndServeTLS(rt.CerFilepath(), rt.CerFilepath())
+			log.Infof("activated HTTP over TLS:\nkey -> %s\ncer -> %s]", rt.KeyFilepath(), rt.CerFilepath())
+			err = serv.ListenAndServeTLS(rt.CerFilepath(), rt.KeyFilepath())
 		} else {
 			err = serv.ListenAndServe()
 		}
