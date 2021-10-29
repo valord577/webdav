@@ -19,10 +19,6 @@ freebsd/arm64
 linux/amd64
 linux/arm
 linux/arm64
-linux/mips
-linux/mips64
-linux/mips64le
-linux/mipsle
 linux/riscv64
 netbsd/amd64
 netbsd/arm
