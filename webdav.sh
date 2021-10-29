@@ -24,8 +24,6 @@ linux/mips
 linux/mips64
 linux/mips64le
 linux/mipsle
-linux/ppc64
-linux/ppc64le
 linux/riscv64
 netbsd/amd64
 netbsd/arm
