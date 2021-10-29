@@ -2,7 +2,6 @@ package rt
 
 import (
 	"encoding/json"
-	"io"
 	"net/http"
 	"os"
 )
@@ -58,15 +57,7 @@ func ServeWebDAV(user string, w http.ResponseWriter, r *http.Request) {
 
 // ReadInFile reads the configuration file of webdav server.
 func ReadInFile(filepath string) error {
-	file, err := os.OpenFile(filepath, os.O_RDONLY, 0444)
-	if err != nil {
-		return err
-	}
-	defer func() {
-		_ = file.Close()
-	}()
-
-	bs, err := io.ReadAll(file)
+	bs, err := os.ReadFile(filepath)
 	if err != nil {
 		return err
 	}
