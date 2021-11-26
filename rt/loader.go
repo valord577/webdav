@@ -47,7 +47,10 @@ func (c *cfg) UnmarshalJSON(bs []byte) error {
 	}
 
 	ddl := appJsonc{}
-	json.Unmarshal(bs, &ddl)
+	err := json.Unmarshal(bs, &ddl)
+	if err != nil {
+		return err
+	}
 
 	// logger
 	switch ddl.Logger.Output {
