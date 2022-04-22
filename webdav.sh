@@ -14,17 +14,13 @@ PRESET_TARGETS=$(cat <<- 'EOF'
 darwin/amd64
 darwin/arm64
 freebsd/amd64
-freebsd/arm
 freebsd/arm64
 linux/amd64
-linux/arm
 linux/arm64
 linux/riscv64
 netbsd/amd64
-netbsd/arm
 netbsd/arm64
 openbsd/amd64
-openbsd/arm
 openbsd/arm64
 windows/amd64
 windows/arm

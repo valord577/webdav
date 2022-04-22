@@ -185,6 +185,7 @@ func ignoreComments(bs []byte) ([]byte, error) {
 	}
 
 	b := &bytes.Buffer{}
+	b.Grow(length)
 
 	// state      example        description
 	//   0           -          Initial state
